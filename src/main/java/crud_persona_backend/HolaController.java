@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HolaController {
 
-    @GetMapping("/hola")
-    public String holaMundo() {
-        return "¡Hola Mundo desde Spring Boot!";
+
+    @GetMapping("/")
+    public String home() {
+        return "¡Bienvenido al backend del CRUD de Persona!";
     }
 }
