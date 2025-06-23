@@ -1,0 +1,93 @@
+package crud_persona_backend.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "personas")
+public class Persona {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nombre;
+
+    @Column(unique = true)
+    private String documento;
+
+    private String celular;
+
+    private String email;
+
+    private String sexo;
+
+    private String direccion;
+
+    public Persona() {
+    }
+
+    public Persona(Long id, String nombre, String documento, String celular, String email, String sexo, String direccion) {
+        this.id = id;
+        this.nombre = nombre;
+        this.documento = documento;
+        this.celular = celular;
+        this.email = email;
+        this.sexo = sexo;
+        this.direccion = direccion;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(String documento) {
+        this.documento = documento;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+}
