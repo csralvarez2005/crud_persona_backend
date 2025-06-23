@@ -41,4 +41,8 @@ public class PersonaController {
     public void eliminar(@PathVariable Long id) {
         personaService.eliminar(id);
     }
+    @GetMapping("/")
+    public String checkApi() {
+        return "API activa";
+    }
 }
